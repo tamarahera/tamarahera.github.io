@@ -1,0 +1,46 @@
+{
+    "data" : [
+        {
+            "name": "Dmytro Matyash",
+            "date": "17 March 2023",
+            "src": "images/review3.jpg",
+            "text": "I like that the classes on the platform are quite affordable. I don't have to sit and listen to a lesson for hours, and it's very convenient. I also like classes with a tutor. No one yells or bullies for mistakes. And therefore there is no fear of making a mistake. Training is very comfortable.",
+            "rating": "4"
+        },
+        {
+            "name": "Svitlana Mykytiuk",
+            "date": "1 Juni 2023",
+            "src": "images/review4.jpg",
+            "text": "I am very satisfied with my German tutor on the platform. I like his teaching methods. There are a lot of educational materials: exercises, texts and language simulators. All tutors are highly educated and culturally knowledgeable. I recommend Promova to everyone who wants to learn German with pleasure and interest.",
+            "rating": "5"
+        },
+        {
+            "name": "Noah Lewandowski",
+            "date": "24 Februar 2023",
+            "src": "images/review5.jpg",
+            "text": "You can learn German from anywhere in the world. All I need is stable Internet, a camera and headphones. An affordable price is an important plus for me personally. At the first lesson, the level of language proficiency and the topics that need to be improved are determined for free.",
+            "rating": "5"
+        },
+        {
+            "name": "Oleksandra Valter",
+            "date": "31 October 2022",
+            "src": "images/review6.jpg",
+            "text": "I have been studying German with die Rede for about 8 months. I use the following services of the school: I study with the teacher on Skype, I participate in the conversation club, I study words with the help of the application, I study German by my favorite songs. Really like the new e-textbook. In the process of studying, various awards and badges are awarded, and one can see one's own ratings and progress.",
+            "rating": "4"
+        },
+        {
+            "name": "John Jones",
+            "date": "30 September 2022",
+            "src": "images/review7.jpg",
+            "text": "The best courses I've ever attended! It was a great pleasure to study with Margret and Joerg! Very professional and responsible teachers with a good sense of humor! The lessons, in addition to being incredibly useful, are also positive and fun! The courses were very effective for me. Thanks a lot.",
+            "rating": "5"
+        },
+        {
+            "name": "Marie Taylor",
+            "date": "18 January 2022",
+            "src": "images/review8.jpg",
+            "text": "I have been studying German for a year. Now I am already finishing the B1 course. The teacher is excellent at explaining grammar and vocabulary. Of course, you should also study independently after the lessons for the best result. The application diversifies learning and helps to remember different phrases and expressions. I also plan to take the B2 course.",
+            "rating": "5"
+        }
+    ]
+}
