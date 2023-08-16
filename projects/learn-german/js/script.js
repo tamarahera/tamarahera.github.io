@@ -507,19 +507,12 @@ const modal = () => {
 
   window.addEventListener('scroll', initScroll);
   initModal('#modalContact', 'modal--active', 'modal__overlay', '[data-btn="contact"]', '#modalContact [data-btn="modal-close"]');
-  initModal('#modalLevel', 'modal--active', 'modal__overlay', '[data-btn="level"]');
-  initModal('#modalOrder', 'modal--active', 'modal__overlay', '[data-btn="order"]', '#modalLevel [data-btn="modal-close"]');
+  initModal('#modalLevel', 'modal--active', 'modal__overlay', '[data-btn="level"]', '#modalLevel [data-btn="modal-close"]');
+  initModal('#modalOrder', 'modal--active', 'modal__overlay', '[data-btn="order"]', '#modalOrder [data-btn="modal-close"]');
   initModal('#modalGift', 'modal--active', 'modal__overlay', '[data-btn="gift"]', '#modalGift [data-btn="modal-close"]', true);
   initModal('#modalImg', 'modal--active', 'modal__overlay', '.phrase__item-link', false, false, true);
-  initModal('#modalCookie', 'modal--active', 'modal__overlay', false, '#modalCookie .modal__btn');
-
-  /*     const cookie = document.querySelector('#modalCookie');
-      console.log(cookie)
-      setTimeout(() => {
-          cookie.style.cssText = `display:flex;opacity:1;animation-name:none;`
-      }, 1000); */
+  initModal('#modalCookie', 'modal--active', 'modal__overlay', false, '#modalCookie [data-btn="modal-close"]');
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (modal);
 
 /***/ }),
@@ -849,6 +842,19 @@ const tabs = (parentSelector, tabSelector, contentSelector, activeClassTab, acti
   parent.addEventListener('click', e => {
     const target = e.target;
     if ((target.classList.contains(tabSelector.replace(/\./, '')) || target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) && !target.classList.contains(activeClassTab) && target) {
+      tabs.forEach((item, i) => {
+        if (item === target || item === target.parentNode) {
+          // parentNode для того, щоб дочірні ел посилались на головний таргет
+          hideContent();
+          showContent(i);
+        }
+      });
+    }
+    ;
+  });
+  parent.addEventListener('keydown', e => {
+    const target = e.target;
+    if ((target.classList.contains(tabSelector.replace(/\./, '')) || target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) && !target.classList.contains(activeClassTab) && target && e.key === 'Enter') {
       tabs.forEach((item, i) => {
         if (item === target || item === target.parentNode) {
           // parentNode для того, щоб дочірні ел посилались на головний таргет
