@@ -418,7 +418,7 @@ var loadMoreCats = function loadMoreCats() {
   });
   function createItem(response) {
     var sex;
-    response.forEach(function (_ref2) {
+    response.cats.forEach(function (_ref2) {
       var name = _ref2.name,
         srcImg = _ref2.srcImg,
         srcSex = _ref2.srcSex,
