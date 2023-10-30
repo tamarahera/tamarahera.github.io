@@ -148,17 +148,19 @@ const cookie = () => {
     }
   };
   const storageType = cookieStorage;
-  const consentPropertyType = 'site_consent';
+  const consentPropertyType = 'rede_cookie';
   const toggleStorage = prop => {
     // зберігаємо згоду юзера
     storageType.setItem(consentPropertyType, prop);
   };
-  const btnCancel = document.querySelector('[data-btn="cookie-reject"]');
-  const btnAccept = document.querySelector('[data-btn="cookie-accept"]');
-  btnAccept.addEventListener('click', () => {
+  const btnCancel = document.querySelector('[data-cookie="reject"]');
+  const btnAccept = document.querySelector('[data-cookie="accept"]');
+  btnAccept.addEventListener('click', e => {
+    console.log(e);
     toggleStorage(true);
   });
-  btnCancel.addEventListener('click', () => {
+  btnCancel.addEventListener('click', e => {
+    console.log(e);
     toggleStorage(false);
   });
 };
@@ -268,10 +270,12 @@ const hamburger = (btnOpen, btnClose, menuClass, logoText, headerActiveClass, lo
   function openMenu() {
     menu.classList.add(headerActiveClass);
     logo.classList.add(logoActiveClass);
+    document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
     menu.classList.remove(headerActiveClass);
     logo.classList.remove(logoActiveClass);
+    document.body.style.overflow = '';
   }
   hamburgerBtnOpen.addEventListener('click', () => {
     if (!menu.classList.contains(headerActiveClass)) {
@@ -285,6 +289,11 @@ const hamburger = (btnOpen, btnClose, menuClass, logoText, headerActiveClass, lo
   });
   menu.parentElement.addEventListener('click', e => {
     if (e.target.tagName === 'A' && menu.classList.contains(headerActiveClass) || e.target.classList.contains(overlayClass)) {
+      closeMenu();
+    }
+  });
+  window.addEventListener('keydown', e => {
+    if (menu.classList.contains(headerActiveClass) && e.key === 'Escape') {
       closeMenu();
     }
   });

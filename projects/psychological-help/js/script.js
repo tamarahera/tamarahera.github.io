@@ -37,7 +37,7 @@ const accordion = (triggers, triggerActiveClass, contentActiveClass) => {
 __webpack_require__.r(__webpack_exports__);
 const cookie = () => {
   const storageType = localStorage;
-  const consentPropertyType = 'site_consent';
+  const consentPropertyType = 'psychological_storage';
   const hasConsented = () => {
     if (storageType.getItem(consentPropertyType) === 'true') {
       return true;
