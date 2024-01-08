@@ -9,8 +9,14 @@ window.addEventListener('DOMContentLoaded', () => {
             menuOverlay = document.querySelector('.menu__overlay'),
             closeElem = document.querySelector('.menu__close');
 
-        hamburger.addEventListener('click', () => {
+        hamburger.addEventListener('click', (e) => {
             menu.classList.add('active');
+        });
+
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                menu.classList.add('active');
+            }            
         });
 
         closeElem.addEventListener('click', () => {
